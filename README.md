@@ -6,15 +6,15 @@ We introduce the GKT framework which excels in both efficiency and affordability
 
 GKT consists of two steps: guidance generation and response completion. In guidance generation, teacher model generates guidance prompts using batch generation to process concurrent user inputs. In response completion, student model receives guidance prompt and complete the response. Student model generates output with a batch size of 1 which allows customize generation settings by the user
 
-## Get Started
-### Requirement
+## 🎉Get Started
+### 🛠️Requirement
 ```
 # Please install PyTorch according to your CUDA version.
 pip3 install torch torchvision torchaudio
 pip install transformers==4.35.0
 ```
-### GKT
-example for CSQA dataset
+### 👀GKT
+👉🏻example for CSQA dataset
 ```
 #guidance generation stage
 
@@ -33,7 +33,7 @@ CUDA_VISIBLE_DEVICES=0 python llama_big2small_stage2_batch_decoding.py \
 
 ```
 
-example for GSM8K dataset
+👉🏻example for GSM8K dataset
 ```
 #guidance generation stage
 
@@ -51,7 +51,7 @@ CUDA_VISIBLE_DEVICES=0 python llama_big2small_stage2_batch_decoding.py \
 
 ```
 
-example for AQUA-RAT dataset
+👉🏻example for AQUA-RAT dataset
 ```
 #guidance generation stage
 
@@ -68,7 +68,7 @@ CUDA_VISIBLE_DEVICES=0 python llama_big2small_stage2_batch_decoding.py \
 --out_path "output/big2small"
 ```
 
-### Single mode generation
+### 👀Single mode generation
 
 ```
 # GSM8K
@@ -85,4 +85,8 @@ CUDA_VISIBLE_DEVICES=0 python llama_singlemodel_batch_decoding.py \
 CUDA_VISIBLE_DEVICES=0 python llama_singlemodel_batch_decoding.py \
 --modelset_name "llama-big" --max_gen_len 100 \
 --dataset AQuA  --few_shot 4
+```
+
+## 📖Citing GKT
+```
 ```
