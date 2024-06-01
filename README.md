@@ -2,6 +2,8 @@
 
 We introduce the GKT framework which excels in both efficiency and affordability. GKT uses larger models to batch generate guidance and then pass the guidance to smaller models, while ensuring user customization.
 
+[paper link](https://arxiv.org/abs/2405.19635)
+
 ![image](https://github.com/Zoeyyao27/GKT/blob/main/figure/GKT.png)
 
 GKT consists of two steps: guidance generation and response completion. In guidance generation, teacher model generates guidance prompts using batch generation to process concurrent user inputs. In response completion, student model receives guidance prompt and complete the response. Student model generates output with a batch size of 1 which allows customize generation settings by the user
@@ -89,4 +91,10 @@ CUDA_VISIBLE_DEVICES=0 python llama_singlemodel_batch_decoding.py \
 
 ## 📖Citing GKT
 ```
+@article{yao2024gkt,
+  title={GKT: A Novel Guidance-Based Knowledge Transfer Framework For Efficient Cloud-edge Collaboration LLM Deployment},
+  author={Yao, Yao and Li, Zuchao and Zhao, Hai},
+  journal={arXiv preprint arXiv:2405.19635},
+  year={2024}
+}
 ```
